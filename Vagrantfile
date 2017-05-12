@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
       vb.cpus = "1"
       vb.linked_clone = "true"
     end
-#    node.vm.network "private_network", ip: "192.168.51.5#{i}"
+#    node.vm.network "private_network", ip: "192.168.10.6#{i}"
     node.vm.network "public_network", bridge: "enp4s0f0", ip: "192.168.10.6#{i}"
     node.vm.provision :shell, path: "bootstrap-ubuntu.sh"
     node.vm.provision :shell, path: "bootstrap-zsh.sh"
@@ -38,7 +38,7 @@ end
       vb.cpus = "2"
       vb.linked_clone = "true"
     end
-#    node.vm.network "private_network", ip: "192.168.51.5#{i}"
+#    node.vm.network "private_network", ip: "192.168.10.6#{i}"
     node.vm.network "public_network", bridge: "enp4s0f0", ip: "192.168.10.6#{i}"
 #    node.vm.synced_folder ".", "/vagrant", disabled: true
     node.vm.provision :shell, path: "bootstrap-ansible.sh"
