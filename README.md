@@ -2,7 +2,7 @@
 
 Baseline for a lab environment for using Docker CE. This will install the following: 
 
-node-0 as an Ansible Control Server + configure the Repos for instal Docker but not install Docker.  
+node-0 as an Ansible Control Server + configure the Repos for instal Docker but not install Docker. To enable Docker CE install at build time, uncomment the "bootstrap-docker.sh" line in the (0..0) section at the bottom of the Vagrantfile.  
 node-1 thru node-x as Docker CE nodes.  
 
 Ansible will need some additional configuration, namely in the ssh key pairs but for the most part it'll work out of the box (batteries included). If Ansible is not your thing, it's fine to configure Docker Swarm manually.  
