@@ -4,7 +4,7 @@ ssh-keygen -f /root/.ssh/id_rsa -t rsa -b 2048 -N ''
 
 # Install Packages
 apt-get update
-apt-get install -y tree ansible
+apt-get install -y tree ansible sshpass
 
 # Setup Ansible Hosts
 touch /etc/ansible/hosts

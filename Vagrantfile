@@ -12,12 +12,12 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-(1..9).each do |i|
+(1..4).each do |i|
   config.vm.define "node-#{i}" do |node|
     node.vm.box = "ubuntu/yakkety64"
     node.vm.hostname = "node-#{i}"
     node.vm.provider "virtualbox" do |vb|
-      vb.memory = "4096"
+      vb.memory = "12288"
       vb.cpus = "1"
       vb.linked_clone = "true"
     end
@@ -34,7 +34,7 @@ end
     node.vm.box = "ubuntu/yakkety64"
     node.vm.hostname = "node-#{i}"
     node.vm.provider "virtualbox" do |vb|
-      vb.memory = "4096"
+      vb.memory = "12288"
       vb.cpus = "2"
       vb.linked_clone = "true"
     end
