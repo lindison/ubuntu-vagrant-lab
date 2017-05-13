@@ -53,7 +53,7 @@ docker container run \
   google/cadvisor:latest
 
 # Install Alert Manager
-docker run -p 9093:9093 prom/alertmanager \
+docker run -d -p 9093:9093 prom/alertmanager \
        -config.file=/etc/alertmanager/config.yml \
        -storage.path=/alertmanager
 
