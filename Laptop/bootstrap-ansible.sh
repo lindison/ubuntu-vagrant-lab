@@ -6,9 +6,12 @@ ssh-keygen -f /root/.ssh/id_rsa -t rsa -b 2048 -N ''
 apt-get update
 apt-get install -y tree ansible sshpass
 
+mkdir /root/dk102
+git clone http://github.com/lindison/docker_labs.git /root/dk102/
+
 # Setup Ansible Hosts
 touch /etc/ansible/hosts
-cat >> /etc/ansible/hosts <<EOL
+cat > /etc/ansible/hosts <<EOL
 
 [workers]
 node-1

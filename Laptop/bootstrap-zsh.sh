@@ -1,6 +1,6 @@
 # Install ZSH
 apt-get update
-apt-get install -y zsh
+apt-get install -y zsh silversearcher-ag
 
 # Configure ZSH 
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
